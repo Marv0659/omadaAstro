@@ -4,6 +4,7 @@ import Navbar from "../components/Navbar.astro";
 import Videotext from "../components/Videotext.astro";
 import Carousel from "../components/Carousel.astro";
 import Omadatest from "../components/Omadatest.astro";
+import Slidertest from "../components/slidertest.astro";
 ---
 
 <html lang="en">
@@ -16,9 +17,16 @@ import Omadatest from "../components/Omadatest.astro";
   </head>
   <body>
     <Navbar />
+    <Slidertest />
     <Videotext />
-    <Carousel />
+
     <Omadatest />
     <slot />
   </body>
 </html>
+<style>
+  html,
+  body {
+    background-color: #fffef3;
+  }
+</style>

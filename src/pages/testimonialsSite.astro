@@ -16,9 +16,7 @@ const respone = await fetch(url, {
 const udsagn = await respone.json();
 ---
 
-<Mainlayout title="Anmeldelser">
   <main>
-    <Form />
     <ul>
       {
         udsagn.map((testimonials) => {
@@ -27,4 +25,3 @@ const udsagn = await respone.json();
       }
     </ul>
   </main>
-</Mainlayout>

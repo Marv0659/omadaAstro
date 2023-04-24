@@ -2,6 +2,7 @@
 import Mainlayout from "../layouts/Mainlayout.astro";
 import Form from "../components/Form.astro";
 import Testimonials from "../components/Testimonials.astro";
+import TestimonialsTo from "../components/TestimonialsTo.astro";
 
 const url = "https://nswivjmgwwviqfdybvwd.supabase.co/rest/v1/testimonials?approved=is.true";
 const key = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im5zd2l2am1nd3d2aXFmZHlidndkIiwicm9sZSI6ImFub24iLCJpYXQiOjE2ODE3NjQ0OTcsImV4cCI6MTk5NzM0MDQ5N30.MjpQn87VGMTtbxQHM9wi7-6TGEBCWoMn6QV4Jlgkq-c";
@@ -16,12 +17,15 @@ const respone = await fetch(url, {
 const udsagn = await respone.json();
 ---
 
-  <main>
-    <ul>
+ 
+    <div>
       {
         udsagn.map((testimonials) => {
-          return <Testimonials name={testimonials.name} overskrift={testimonials.overskrift} text={testimonials.text} />;
+          return <Testimonials
+           name={testimonials.name} 
+           overskrift={testimonials.overskrift} 
+           text={testimonials.text} />;
         })
       }
-    </ul>
-  </main>
+    </div>
+  

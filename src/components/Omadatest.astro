@@ -1,11 +1,13 @@
+---
+import Testimonials from "./Testimonials.astro";
+import TestimonialsSite from "../pages/testimonialsSite.astro";
+---
+
 <div class="omadatest">
-  <h4>Omada Test</h4>
+  <h4>Omada Testimonials</h4>
   <hr />
   <div class="omadatesttext">
-    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corporis quasi sequi cupiditate.</p>
-  </div>
-  <div class="bannerpic">
-    <img src="src/img/secondary-banner-placeholder.jpg" alt="placeholder" />
+    <TestimonialsSite/>
   </div>
 </div>
 <style>
@@ -40,9 +42,22 @@
     padding-bottom: 8rem;
   }
   .omadatesttext {
+    
     margin-top: 3rem;
     padding: 0 18rem;
     color: #e55f4d;
     font-size: 2rem;
   }
+
+
+  @media screen and (max-width: 750px) {
+    .omadatesttext {
+    padding: 0;
+    margin-top: 3rem;
+    color: #e55f4d;
+    font-size: 2rem;
+  }
+    
+}
+  
 </style>
